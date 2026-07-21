@@ -7,7 +7,7 @@ class LLMConnector:
     def __init__(self, openai_api_key: str):
         self.client = AsyncOpenAI(api_key=openai_api_key)
 
-    async def ask_openai(self, query: str, model: str = "gpt-4", temperature: float = 0.7, max_tokens: int = 500) -> str:
+    async def ask_openai(self, query: str, model: str = "gpt-4o", temperature: float = 0.7, max_tokens: int = 500) -> str:
         try:
             response = await self.client.chat.completions.create(
                 messages=[

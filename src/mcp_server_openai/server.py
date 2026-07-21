@@ -28,7 +28,7 @@ def serve(openai_api_key: str) -> Server:
                     "type": "object",
                     "properties": {
                         "query": {"type": "string", "description": "Ask assistant"},
-                        "model": {"type": "string", "default": "gpt-4", "enum": ["gpt-4", "gpt-3.5-turbo"]},
+                        "model": {"type": "string", "default": "gpt-4o", "enum": ["gpt-4o", "gpt-4o-mini", "gpt-4", "gpt-3.5-turbo"]},
                         "temperature": {"type": "number", "default": 0.7, "minimum": 0, "maximum": 2},
                         "max_tokens": {"type": "integer", "default": 500, "minimum": 1, "maximum": 4000}
                     },
@@ -46,7 +46,7 @@ def serve(openai_api_key: str) -> Server:
             if name == "ask-openai":
                 response = await connector.ask_openai(
                     query=arguments["query"],
-                    model=arguments.get("model", "gpt-4"),
+                    model=arguments.get("model", "gpt-4o"),
                     temperature=arguments.get("temperature", 0.7),
                     max_tokens=arguments.get("max_tokens", 500)
                 )
