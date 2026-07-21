@@ -34,6 +34,19 @@ def serve(openai_api_key: str) -> Server:
                     },
                     "required": ["query"]
                 }
+            ),
+            types.Tool(
+                name="generate-image",
+                description="Generate an image from a text prompt using OpenAI's gpt-image-1 model. Returns the local file path of the saved PNG.",
+                inputSchema={
+                    "type": "object",
+                    "properties": {
+                        "prompt": {"type": "string", "description": "Description of the image to generate"},
+                        "size": {"type": "string", "default": "1024x1536", "enum": ["1024x1024", "1024x1536", "1536x1024"]},
+                        "output_dir": {"type": "string", "description": "Absolute directory path to save the image in. Defaults to ~/Desktop/Claude NBS/_Temp"}
+                    },
+                    "required": ["prompt"]
+                }
             )
         ]
 
@@ -51,6 +64,14 @@ def serve(openai_api_key: str) -> Server:
                     max_tokens=arguments.get("max_tokens", 500)
                 )
                 return [types.TextContent(type="text", text=f"OpenAI Response:\n{response}")]
+
+            if name == "generate-image":
+                output_path = await connector.generate_image(
+                    prompt=arguments["prompt"],
+                    size=arguments.get("size", "1024x1536"),
+                    output_dir=arguments.get("output_dir"),
+                )
+                return [types.TextContent(type="text", text=f"Image saved to: {output_path}")]
 
             raise ValueError(f"Unknown tool: {name}")
         except Exception as e:
