@@ -1,0 +1,11 @@
+START HERE
+==========
+
+1. Open README.md
+2. Open spec/CLAUDE_BUILD_PROMPT.md
+3. Attach/show Claude these two images first:
+   - assets/reference/04-creator-dashboard-system-mockup.png
+   - assets/reference/02-creator-mat-master.png
+4. Tell Claude exactly:
+   "Treat the attached visuals like approved Figma comps, not inspiration. Follow CLAUDE_BUILD_PROMPT.md. Do not redesign anything. Stop after the static visual build and simulator screenshot."
+5. Do not allow Claude to connect APIs or live data until the static widget is approved.

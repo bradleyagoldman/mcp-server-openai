@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Creator Dashboard</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
+	</dict>
+	<key>NSWidgetWantsLocation</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Doto-Bold.ttf</string>
+		<string>IBMPlexMono-Medium.ttf</string>
+		<string>InterTight-Regular.ttf</string>
+		<string>InterTight-Medium.ttf</string>
+		<string>InterTight-SemiBold.ttf</string>
+		<string>InterTight-Bold.ttf</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The widget shows the weather where you are.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>The widget shows your next event and KK / Family plans.</string>
+	<key>NSRemindersFullAccessUsageDescription</key>
+	<string>The widget shows your most urgent reminder under Don't Forget, and + saves new ones.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>The widget shows last night's sleep and today's steps.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Creator Dashboard never writes to the Health app.</string>
+</dict>
+</plist>

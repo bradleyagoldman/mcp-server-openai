@@ -1,0 +1,33 @@
+{
+  "productName": "Creator Dashboard",
+  "primaryTheme": "Creator Mat",
+  "secondaryTheme": "Editorial",
+  "colors": {
+    "matGreen": "#0E2F24",
+    "signalOrange": "#FF3B0F",
+    "paper": "#F4F1E9",
+    "gridGreen": "#2D4F42",
+    "mutedLine": "#9AA49D"
+  },
+  "typography": {
+    "character": "Swiss/editorial grotesk",
+    "preferredFamilies": ["Helvetica Neue", "Inter", "Space Grotesk", "System Sans Serif"],
+    "notes": "Typography is the dominant visual device. Use strong scale contrast, restrained weights, deliberate tracking and line height."
+  },
+  "geometry": {
+    "internalRounding": "minimal",
+    "moduleStyle": "straight modular divisions",
+    "outerWidgetMask": "allow Apple's system mask"
+  },
+  "visualLanguage": [
+    "dark matte cutting-mat green",
+    "major and minor grid",
+    "ruler ticks",
+    "registration marks",
+    "crosshairs",
+    "thin technical dividers",
+    "orange signal blocks and dots",
+    "off-white typography",
+    "editorial hierarchy"
+  ]
+}
